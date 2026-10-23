@@ -20,5 +20,5 @@ extension NSNotification.Name {
         
     static let AdvancedSettings = Notification.Name("AdvancedSettings")
     
-    public static let SettingsUpdated: NSNotification.Name = NSNotification.Name("org.sbarex.SourceCodeSyntaxHighlight-settings-changed")
+    public static let SettingsUpdated: NSNotification.Name = NSNotification.Name("com.michaelyu.SourceCodeSyntaxHighlight-settings-changed")
 }

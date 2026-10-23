@@ -91,7 +91,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
     }()
     
     lazy var connection: NSXPCConnection = {
-        let connection = NSXPCConnection(serviceName: "org.sbarex.SourceCodeSyntaxHighlight.XPCRender")
+        let connection = NSXPCConnection(serviceName: "com.michaelyu.SourceCodeSyntaxHighlight.XPCRender")
         connection.remoteObjectInterface = NSXPCInterface(with: XPCLightRenderServiceProtocol.self)
         connection.resume()
         return connection
@@ -175,7 +175,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
         )
         
         do {
-            let result = try self.renderFile(at: url, refreshingSettings: false)
+            let result = try self.renderFile(at: url, refreshingSettings: true)
             
             DispatchQueue.main.async {
                 let previewRect: CGRect

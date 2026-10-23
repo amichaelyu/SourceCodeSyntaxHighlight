@@ -9,7 +9,7 @@
 	<key>CFBundleHelpBookFolder</key>
 	<string>SyntaxHighlight.help</string>
 	<key>CFBundleHelpBookName</key>
-	<string>org.sbarex.SourceCodeSyntaxHighlight.help</string>
+	<string>com.michaelyu.SourceCodeSyntaxHighlight.help</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
@@ -44,8 +44,8 @@
 	<false/>
 	<key>SUEnableInstallerLauncherService</key>
 	<true/>
-	<key>SUFeedURL</key>
-	<string>https://sbarex.github.io/SourceCodeSyntaxHighlight/appcast.xml</string>
+	<key>SUEnableAutomaticChecks</key>
+	<false/>
 	<key>SUPublicEDKey</key>
 	<string>J+ikFQXeR6eaUV0jvyfZAJKeYh+9UKGJuD/kJSIXnZk=</string>
 	<key>SUScheduledCheckInterval</key>
@@ -2198,7 +2198,7 @@
 			<key>UTTypeDescription</key>
 			<string>Conf Source File</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.sbarex.conf</string>
+			<string>com.michaelyu.conf</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -2216,7 +2216,7 @@
 			<key>UTTypeDescription</key>
 			<string>Dart Source File</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.sbarex.dart</string>
+			<string>com.michaelyu.dart</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -2234,7 +2234,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft Powershell source file</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.sbarex.ms-powershell</string>
+			<string>com.michaelyu.ms-powershell</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -2252,7 +2252,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft Powershell module file</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.sbarex.ms-powershell-module</string>
+			<string>com.michaelyu.ms-powershell-module</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -2270,7 +2270,7 @@
 			<key>UTTypeDescription</key>
 			<string>Microsoft Powershell module manifest</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.sbarex.ms-powershell-module-manifest</string>
+			<string>com.michaelyu.ms-powershell-module-manifest</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>
@@ -2288,7 +2288,7 @@
 			<key>UTTypeDescription</key>
 			<string>Nim Source File</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.sbarex.nim</string>
+			<string>com.michaelyu.nim</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

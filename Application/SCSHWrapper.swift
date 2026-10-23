@@ -11,7 +11,7 @@ import Syntax_Highlight_XPC_Service
 
 public class SCSHWrapper: NSObject {
     static let connection: NSXPCConnection = {
-        let connection = NSXPCConnection(serviceName: "org.sbarex.SourceCodeSyntaxHighlight.XPCService")
+        let connection = NSXPCConnection(serviceName: "com.michaelyu.SourceCodeSyntaxHighlight.XPCService")
         connection.remoteObjectInterface = NSXPCInterface(with: SCSHXPCServiceProtocol.self)
         connection.resume()
         return connection

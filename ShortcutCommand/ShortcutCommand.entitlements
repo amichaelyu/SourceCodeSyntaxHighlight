@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.org.sbarex.syntaxhighlight</string>
+		<string>SNC2X5N2CY.com.michaelyu.syntaxhighlight</string>
 	</array>
 	<key>com.apple.security.assets.movies.read-only</key>
 	<true/>
@@ -34,7 +34,7 @@
 	</array>
 	<key>com.apple.security.temporary-exception.shared-preference.read-only</key>
 	<array>
-		<string>org.sbarex.SourceCodeSyntaxHighlight</string>
+		<string>com.michaelyu.SourceCodeSyntaxHighlight</string>
 	</array>
 </dict>
 </plist>

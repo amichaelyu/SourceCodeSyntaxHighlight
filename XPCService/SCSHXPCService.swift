@@ -39,7 +39,7 @@ class SCSHXPCService: SCSHBaseXPCService, SCSHXPCServiceProtocol {
     override init() {
         if let pref = SCSHXPCService.preferencesUrl {
             /// Old settings name.
-            let url_old = pref.appendingPathComponent("org.sbarex.SourceCodeSyntaxHightlight.plist")
+            let url_old = pref.appendingPathComponent("com.michaelyu.SourceCodeSyntaxHightlight.plist")
             /// New settings name.
             let url_new = pref.appendingPathComponent(type(of: self).XPCDomain + ".plist")
             if FileManager.default.fileExists(atPath: url_old.path) && !FileManager.default.fileExists(atPath: url_new.path) {

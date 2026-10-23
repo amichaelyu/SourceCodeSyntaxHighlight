@@ -29,7 +29,7 @@ import UniformTypeIdentifiers
 class SCSHBaseXPCService: NSObject {
     // MARK: - Class properties
     
-    static let XPCDomain: String = "org.sbarex.SourceCodeSyntaxHighlight"
+    static let XPCDomain: String = "com.michaelyu.SourceCodeSyntaxHighlight"
     
     static let serviceBundle: Bundle = {
         if Bundle.main.bundlePath.hasSuffix(".xpc") || Bundle.main.bundlePath.hasSuffix(".appex") {

@@ -29,7 +29,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>QLIsDataBasedPreview</key>
-			<true/>
+			<false/>
 			<key>QLSupportedContentTypes</key>
 			<array>
 				<string>build.astro.files</string>
@@ -65,7 +65,6 @@
 				<string>com.barebones.bbedit.rust-source</string>
 				<string>com.barebones.bbedit.scss-source</string>
 				<string>com.barebones.bbedit.sql-source</string>
-				<string>com.barebones.bbedit.tex-source</string>
 				<string>com.barebones.bbedit.typescript-source</string>
 				<string>com.barebones.bbedit.vbscript-source</string>
 				<string>com.barebones.bbedit.verilog-hdl-source</string>
@@ -121,7 +120,6 @@
 				<string>com.unity.document</string>
 				<string>dev.nix.source</string>
 				<string>dev.svelte.source</string>
-				<string>edu.uo.texshop.tex</string>
 				<string>info.haml.haml</string>
 				<string>io.azkaban.flow</string>
 				<string>io.github.jsx</string>
@@ -175,7 +173,6 @@
 				<string>org.km3</string>
 				<string>org.kotlinlang.kotlin-source</string>
 				<string>org.kotlinlang.source</string>
-				<string>org.latex-project.latex</string>
 				<string>org.lesscss.less</string>
 				<string>org.letterror.designspace</string>
 				<string>org.lilypond.files</string>
@@ -225,19 +222,18 @@
 				<string>org.rust-lang.rust</string>
 				<string>org.rust-lang.source</string>
 				<string>org.sagemath.source</string>
-				<string>org.sbarex.conf</string>
-				<string>org.sbarex.dart</string>
-				<string>org.sbarex.ms-powershell</string>
-				<string>org.sbarex.ms-powershell-module</string>
-				<string>org.sbarex.ms-powershell-module-manifest</string>
-				<string>org.sbarex.nim</string>
-				<string>org.sbarex.qlsyntaxhighlight.dummy</string>
+				<string>com.michaelyu.conf</string>
+				<string>com.michaelyu.dart</string>
+				<string>com.michaelyu.ms-powershell</string>
+				<string>com.michaelyu.ms-powershell-module</string>
+				<string>com.michaelyu.ms-powershell-module-manifest</string>
+				<string>com.michaelyu.nim</string>
+				<string>com.michaelyu.qlsyntaxhighlight.dummy</string>
 				<string>org.scala.source</string>
 				<string>org.smali.source</string>
 				<string>org.soliditylang.source</string>
 				<string>org.tug.cls</string>
 				<string>org.tug.lua</string>
-				<string>org.tug.tex</string>
 				<string>org.tug.tex.bibtex</string>
 				<string>org.tug.sty</string>
 				<string>org.unifiedfontobject.fea</string>
@@ -257,7 +253,6 @@
 				<string>org.vim.pch-file</string>
 				<string>org.vim.pch++-file</string>
 				<string>org.vim.sql-file</string>
-				<string>org.vim.tex-file</string>
 				<string>org.vim.toml-file</string>
 				<string>org.vim.vb-file</string>
 				<string>org.vim.vba-file</string>
@@ -317,7 +312,6 @@
 				<string>public.source-code</string>
 				<string>public.swift-source</string>
 				<string>public.tcsh-script</string>
-				<string>public.tex</string>
 				<string>public.text</string>
 				<string>public.toml</string>
 				<string>public.tsx</string>
