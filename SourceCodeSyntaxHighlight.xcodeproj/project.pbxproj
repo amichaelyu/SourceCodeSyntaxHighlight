@@ -7,6 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A4F8F60793DC1B9D262CDA /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = E8CD72C11CF5781AC605BDF3 /* html.c */; };
+		075E7396CFB048623854D6D5 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC5A161382C018DEE86773E /* render.c */; };
+		07B58258B458AAE35C968034 /* core-extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC55C5432EC501FE9C6611 /* core-extensions.c */; };
+		098ABF5CA5FC1A335669E71E /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 193F80569876E2F0AB29790C /* linked_list.c */; };
+		0A81A08EAE352F12583C6BD6 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B08557BB8FBA50D03205035 /* libcurl.tbd */; };
+		0BD2C44BA5708D79016D0BE4 /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 757E3A4957170420E234396B /* cmark.c */; };
+		0C225D26951413115B5F3FCD /* emoji_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE3BE21421964AF6B99E1340 /* emoji_utils.cpp */; };
+		123F0207725A6834173DAE07 /* strikethrough.c in Sources */ = {isa = PBXBuildFile; fileRef = 738DCC0C5599C5565FEE0889 /* strikethrough.c */; };
+		145C2AF1AE8EC0A4AE546848 /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 03F080B52A1454B997FD4CE2 /* ext_scanners.c */; };
+		149BD0F62BA8FCA1F8116138 /* heads.c in Sources */ = {isa = PBXBuildFile; fileRef = D372367DD0DF971C4BF6B630 /* heads.c */; };
+		152FAE806C541E882ECF52E1 /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7682738145C00A3C4B532D28 /* encode.c */; };
+		1689D135B1E082E51AC6B908 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF40594B71BC216121717ACC /* buffer.c */; };
+		18E757E05F681E5A37A69487 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0461526FE051DE0763BD9 /* houdini_html_u.c */; };
+		190B0C2982A59EBC149EBEB7 /* ext_scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 03F080B52A1454B997FD4CE2 /* ext_scanners.c */; };
+		20E47DAC782CAB297B6BCE3E /* heads_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F897CF05D0E489F9526A57BE /* heads_utils.cpp */; };
+		20FC9AFFB41710A3941AE37C /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C35886A88AFE8A97462851C /* blocks.c */; };
+		294A1492B2DE4983A6D1483A /* TeXRender.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = B83F6469F81838169042D919 /* TeXRender.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2C19B4932E176881503519E1 /* c_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 798A80A7FBB59854342BD12D /* c_log.c */; };
+		2D9BDF1D5E3D9C8A4EC953E8 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CF40594B71BC216121717ACC /* buffer.c */; };
+		2DD544C727B445147A920E41 /* strikethrough.c in Sources */ = {isa = PBXBuildFile; fileRef = 738DCC0C5599C5565FEE0889 /* strikethrough.c */; };
+		33AAE8013BEEA176AA4EA249 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 256B9F7B156ADC7CC866F956 /* commonmark.c */; };
+		33B0072CBEEBCFE9A57F1BC7 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F426397360608118F6804DC /* scanners.c */; };
+		36F13399E5BB2746EDDC8AF5 /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 67F87B87A1098B44D43E9C73 /* decode.c */; };
+		39330C88169B32151B23382A /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = ED86E94A8C06202E2C06DB96 /* node.c */; };
+		3E4BC12D7FE0BB4661AEB9D1 /* TeXRenderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F90A99F9E28035E55402F /* TeXRenderProtocol.swift */; };
+		422D45CBE9DF4204B422F495 /* inlineimage.c in Sources */ = {isa = PBXBuildFile; fileRef = E6CC4A39CA792D480B6A6978 /* inlineimage.c */; };
+		4B7D0B2D8B4AA29BCAD19194 /* url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CC42A492A0F44474F20B0CE /* url.cpp */; };
+		4B891D37A88965F0BDD03859 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = B29E67FC32302BC32D6EFB0A /* latex.c */; };
+		4CA46CC0BCC676C4B28D1F27 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C35886A88AFE8A97462851C /* blocks.c */; };
+		4E9C8AC79274EF461C139D74 /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = BCDEA80979E995EF2BE6957A /* syntax_extension.c */; };
+		53397D1666951B52C3DA1A4D /* heads_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F897CF05D0E489F9526A57BE /* heads_utils.cpp */; };
+		53B8AB7324D104BA24E8950C /* MIMEtype.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0A913E8AEBBEE6DF462170 /* MIMEtype.c */; };
+		53E507C4029630085355D7AB /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 757E3A4957170420E234396B /* cmark.c */; };
+		56F167B7CD1CC76D9F64C032 /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B641FA9CBE5EDE5333EB6A3 /* plugin.c */; };
+		578568C93CBE17251018B7C9 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 2BE0461526FE051DE0763BD9 /* houdini_html_u.c */; };
+		5814FF68B99786DC36B40AD4 /* footnotes.c in Sources */ = {isa = PBXBuildFile; fileRef = B39EA59C83C73339EEBC3B4D /* footnotes.c */; };
+		5963AF56644DE4C94B40E756 /* alert.c in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C7C9A1563C4BA9FBF4E7 /* alert.c */; };
+		5AC95C8EFE6376CDA829A5A2 /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = EA32B71D7914A02E179CA9E6 /* registry.c */; };
+		5C905E0D93533C2E2AC7C0FE /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 951C4D0B2B9296EAAE1CBF71 /* iterator.c */; };
+		64FBC8169099BDD1C8C23A8F /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = B29E67FC32302BC32D6EFB0A /* latex.c */; };
+		693FED40F5372895F9835DC8 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E649FD7141B96870FF97B /* houdini_html_e.c */; };
+		6B0D5CBE2B83426AE6B74508 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = E5B821A089FF529BA5ED8709 /* houdini_href_e.c */; };
+		6B6A878FFBF7CBADEE4AFCFC /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E535C48D667A5748FCA49 /* MarkdownRenderer.swift */; };
+		6C38B704C848533C8AA44F67 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E814BC1F9930F0B4A254B9 /* utf8.c */; };
+		6D7BD96715AF7933A1B76EA0 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 287A286A98A1BC88ADA00CE9 /* cmark_ctype.c */; };
+		723FE91A079C809B23B101D6 /* TeXRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000002D41F159B5BA8506EC4 /* TeXRenderer.swift */; };
+		734A9895658283A5067BB701 /* plaintext.c in Sources */ = {isa = PBXBuildFile; fileRef = 53C45550845246053A7AA551 /* plaintext.c */; };
+		7394DB0E1813E7FD080BBF74 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = DC889B3B8DAAB225F022A5B2 /* man.c */; };
+		73A10E1FDE02306A803E6F21 /* scsh_codeblock.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F52F7BFAB8AA5CFECF9A /* scsh_codeblock.c */; };
+		775B6A48039DE053394DB6E0 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = ED86E94A8C06202E2C06DB96 /* node.c */; };
+		7B40240EE76A3B415A7AF767 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = E8CD72C11CF5781AC605BDF3 /* html.c */; };
 		8304B0A4238D8794007A455C /* XPCLightRenderServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F465C238D813500268B4A /* XPCLightRenderServiceProtocol.swift */; };
 		8304B0A5238D879A007A455C /* XPCLightRenderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F465D238D813500268B4A /* XPCLightRenderService.swift */; };
 		8304B0A6238D8954007A455C /* File+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836D01E32386C7CD00B85545 /* File+Ext.swift */; };
@@ -198,6 +249,59 @@
 		83E5E67C25AE1FF900FAF5E2 /* SaveAsFormatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5E67925AE1FF900FAF5E2 /* SaveAsFormatView.swift */; };
 		83E5E68225AE242F00FAF5E2 /* SaveAsFormatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83E5E67B25AE1FF900FAF5E2 /* SaveAsFormatView.xib */; };
 		83EDC92D25F6E23100B1621E /* FontSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EDC92C25F6E23100B1621E /* FontSelectorViewController.swift */; };
+		84C14A7925541ACAE927CA6E /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = E873A6AC89D83443BF30EF8D /* xml.c */; };
+		8D31B0122FD524CE050A40D1 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 287A286A98A1BC88ADA00CE9 /* cmark_ctype.c */; };
+		988CE375628427BB40095E04 /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = E2881A7F825036C9EC1C3B7D /* arena.c */; };
+		994C60EC9FBD3F277A9FB648 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = DEE3BC276601252B34AFFC2F /* autolink.c */; };
+		9BC17B2351DE336DB0E7DE50 /* emoji.c in Sources */ = {isa = PBXBuildFile; fileRef = 005C325DEC8D2CD1D7E29E90 /* emoji.c */; };
+		A077D49F83D01D2A1BF9F93F /* linked_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 193F80569876E2F0AB29790C /* linked_list.c */; };
+		A2A9568FD0F56230A95EF95B /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 256B9F7B156ADC7CC866F956 /* commonmark.c */; };
+		A5ED03CBE1BC4C34F7E42FCA /* tasklist.c in Sources */ = {isa = PBXBuildFile; fileRef = 27A6EEA522176EA081EFC8B4 /* tasklist.c */; };
+		B28B5E8C694060A4B54D598B /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = A6614F78F08312DBCECB2A2B /* table.c */; };
+		B3F329774B4CFF75454CD781 /* c_log.c in Sources */ = {isa = PBXBuildFile; fileRef = 798A80A7FBB59854342BD12D /* c_log.c */; };
+		B51754FDA23D32D3DC092BE8 /* inlineimage.c in Sources */ = {isa = PBXBuildFile; fileRef = E6CC4A39CA792D480B6A6978 /* inlineimage.c */; };
+		B550C86F1A395F9CE1C121AB /* plaintext.c in Sources */ = {isa = PBXBuildFile; fileRef = 53C45550845246053A7AA551 /* plaintext.c */; };
+		B58E2140F8DD79217003D686 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = 1BC5A161382C018DEE86773E /* render.c */; };
+		B80CC5B66A44C2AC11A34967 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = B3AA8B5CE15E85EECB802D3E /* inlines.c */; };
+		B829F2AB01CA2EABA231E3C8 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 951C4D0B2B9296EAAE1CBF71 /* iterator.c */; };
+		B8FD3B67AF7DA949EEE460F3 /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = EA32B71D7914A02E179CA9E6 /* registry.c */; };
+		BD6F78F435F3121BFEF8C117 /* plugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B641FA9CBE5EDE5333EB6A3 /* plugin.c */; };
+		BE326893886CD5C7D4639295 /* heads.c in Sources */ = {isa = PBXBuildFile; fileRef = D372367DD0DF971C4BF6B630 /* heads.c */; };
+		BEBB75F48DE856DC4C226C88 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = F5E814BC1F9930F0B4A254B9 /* utf8.c */; };
+		BF6C849935C7E9E61436E8AD /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = C1E0F26971A5A1C156328592 /* tagfilter.c */; };
+		C345E7B716D8EC25C59959AE /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 361434064CB44E8B2D562897 /* references.c */; };
+		C35F9EB4D6415BF52D17BB84 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F426397360608118F6804DC /* scanners.c */; };
+		C496B5AECBE7C1AF2592040C /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E649FD7141B96870FF97B /* houdini_html_e.c */; };
+		C804AFF3B9F05E89EA26D586 /* markdown.css in Copy Highlight share files */ = {isa = PBXBuildFile; fileRef = 9C041F15B73A4F4E725D52D0 /* markdown.css */; };
+		C8BB5472DA3CD8835E98F184 /* alert.c in Sources */ = {isa = PBXBuildFile; fileRef = FAC2C7C9A1563C4BA9FBF4E7 /* alert.c */; };
+		C9D155EA2FD13A493D9CD4F9 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E535C48D667A5748FCA49 /* MarkdownRenderer.swift */; };
+		CC47C70395CA75DD2A0B0C64 /* MIMEtype.c in Sources */ = {isa = PBXBuildFile; fileRef = CA0A913E8AEBBEE6DF462170 /* MIMEtype.c */; };
+		CF43B8CA62A0C7CB8BCE0A99 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = E5B821A089FF529BA5ED8709 /* houdini_href_e.c */; };
+		D18F6027F54E845DE5BA1BFB /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 08D57FB0ACAED775E44A3347 /* buffer.c */; };
+		D24CCF9CCDF194C555CA2E3E /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 08D57FB0ACAED775E44A3347 /* buffer.c */; };
+		D3194B6C4C2F9010D8353D03 /* url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CC42A492A0F44474F20B0CE /* url.cpp */; };
+		D5E6DB28A930DE2C35A66D5D /* decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 67F87B87A1098B44D43E9C73 /* decode.c */; };
+		DC20AAAA997D792D2E3478F9 /* emoji_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE3BE21421964AF6B99E1340 /* emoji_utils.cpp */; };
+		E1D48F1B16E4C1C45A0E15F3 /* emoji.c in Sources */ = {isa = PBXBuildFile; fileRef = 005C325DEC8D2CD1D7E29E90 /* emoji.c */; };
+		E24CBA232C1A8150A49BBDFF /* tagfilter.c in Sources */ = {isa = PBXBuildFile; fileRef = C1E0F26971A5A1C156328592 /* tagfilter.c */; };
+		E37B4EC53D9FEEEB1E12FCD2 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = B3AA8B5CE15E85EECB802D3E /* inlines.c */; };
+		E44574B442807B0E71531A75 /* table.c in Sources */ = {isa = PBXBuildFile; fileRef = A6614F78F08312DBCECB2A2B /* table.c */; };
+		E616AEA5B84F56756CF2742F /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = E873A6AC89D83443BF30EF8D /* xml.c */; };
+		E84349C6F2378D576B76C2A1 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 361434064CB44E8B2D562897 /* references.c */; };
+		ED1AD6CE808C6C39768235C6 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = DEE3BC276601252B34AFFC2F /* autolink.c */; };
+		F033E6572A71330A2315EA4F /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = DC889B3B8DAAB225F022A5B2 /* man.c */; };
+		F220FD9146F028BF34999BE0 /* TeXRenderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F90A99F9E28035E55402F /* TeXRenderProtocol.swift */; };
+		F26992575FFE1A5837FA5291 /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = E2881A7F825036C9EC1C3B7D /* arena.c */; };
+		F29C5DDF5C037F5948F75629 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE249B6AEE957C31F2F9103 /* main.swift */; };
+		F3D3363F6AEBA80A432F890D /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E124D33BBDB1EB12348FB6E /* map.c */; };
+		F4DE440D764911FE2F5896DF /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = 4E124D33BBDB1EB12348FB6E /* map.c */; };
+		F5DCF7E7103181C214FCCBFF /* tasklist.c in Sources */ = {isa = PBXBuildFile; fileRef = 27A6EEA522176EA081EFC8B4 /* tasklist.c */; };
+		F6ACAFF33A2BD9DBF72AFE96 /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B08557BB8FBA50D03205035 /* libcurl.tbd */; };
+		F6DB4B31C3DE4947A8EFE904 /* syntax_extension.c in Sources */ = {isa = PBXBuildFile; fileRef = BCDEA80979E995EF2BE6957A /* syntax_extension.c */; };
+		F70C617A3090269B4FF340E2 /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 7682738145C00A3C4B532D28 /* encode.c */; };
+		F72BFCA0CB361E9D17ECCB41 /* scsh_codeblock.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F00F52F7BFAB8AA5CFECF9A /* scsh_codeblock.c */; };
+		FBB9EBC26BAFA87274D5C566 /* footnotes.c in Sources */ = {isa = PBXBuildFile; fileRef = B39EA59C83C73339EEBC3B4D /* footnotes.c */; };
+		FD95F38329FE8C7F75D3C88C /* core-extensions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC55C5432EC501FE9C6611 /* core-extensions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +311,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 83B4645425A779FC00DE0CF4;
 			remoteInfo = "highlight-wrapper";
+		};
+		31C1735882651E3C2E162C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8359233D235599F6001506B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBB000E4D906132930826FDC;
+			remoteInfo = TeXRender;
 		};
 		830DF9F127203756004429F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -353,6 +464,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				8362582925A9F3E100475069 /* Syntax Highlight XPC Render.xpc in Embed XPC Services */,
+				294A1492B2DE4983A6D1483A /* TeXRender.xpc in Embed XPC Services */,
 			);
 			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +597,7 @@
 				83A0691123672FD100C795D6 /* style.css in Copy Highlight share files */,
 				834DA8362735BD2600519C78 /* style2.css in Copy Highlight share files */,
 				831C71112618CB2A0011C3F8 /* share in Copy Highlight share files */,
+				C804AFF3B9F05E89EA26D586 /* markdown.css in Copy Highlight share files */,
 			);
 			name = "Copy Highlight share files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +605,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		000002D41F159B5BA8506EC4 /* TeXRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeXRenderer.swift; sourceTree = "<group>"; };
+		005C325DEC8D2CD1D7E29E90 /* emoji.c */ = {isa = PBXFileReference; includeInIndex = 1; path = emoji.c; sourceTree = "<group>"; };
+		03F080B52A1454B997FD4CE2 /* ext_scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; path = ext_scanners.c; sourceTree = "<group>"; };
+		08D57FB0ACAED775E44A3347 /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; path = buffer.c; sourceTree = "<group>"; };
+		0A5E535C48D667A5748FCA49 /* MarkdownRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
+		193F80569876E2F0AB29790C /* linked_list.c */ = {isa = PBXFileReference; includeInIndex = 1; path = linked_list.c; sourceTree = "<group>"; };
+		1BC5A161382C018DEE86773E /* render.c */ = {isa = PBXFileReference; includeInIndex = 1; path = render.c; sourceTree = "<group>"; };
+		1C5E649FD7141B96870FF97B /* houdini_html_e.c */ = {isa = PBXFileReference; includeInIndex = 1; path = houdini_html_e.c; sourceTree = "<group>"; };
+		256B9F7B156ADC7CC866F956 /* commonmark.c */ = {isa = PBXFileReference; includeInIndex = 1; path = commonmark.c; sourceTree = "<group>"; };
+		27A6EEA522176EA081EFC8B4 /* tasklist.c */ = {isa = PBXFileReference; includeInIndex = 1; path = tasklist.c; sourceTree = "<group>"; };
+		287A286A98A1BC88ADA00CE9 /* cmark_ctype.c */ = {isa = PBXFileReference; includeInIndex = 1; path = cmark_ctype.c; sourceTree = "<group>"; };
+		2B641FA9CBE5EDE5333EB6A3 /* plugin.c */ = {isa = PBXFileReference; includeInIndex = 1; path = plugin.c; sourceTree = "<group>"; };
+		2BE0461526FE051DE0763BD9 /* houdini_html_u.c */ = {isa = PBXFileReference; includeInIndex = 1; path = houdini_html_u.c; sourceTree = "<group>"; };
+		361434064CB44E8B2D562897 /* references.c */ = {isa = PBXFileReference; includeInIndex = 1; path = references.c; sourceTree = "<group>"; };
+		4C35886A88AFE8A97462851C /* blocks.c */ = {isa = PBXFileReference; includeInIndex = 1; path = blocks.c; sourceTree = "<group>"; };
+		4E124D33BBDB1EB12348FB6E /* map.c */ = {isa = PBXFileReference; includeInIndex = 1; path = map.c; sourceTree = "<group>"; };
+		53C45550845246053A7AA551 /* plaintext.c */ = {isa = PBXFileReference; includeInIndex = 1; path = plaintext.c; sourceTree = "<group>"; };
+		5AFC55C5432EC501FE9C6611 /* core-extensions.c */ = {isa = PBXFileReference; includeInIndex = 1; path = "core-extensions.c"; sourceTree = "<group>"; };
+		5CC42A492A0F44474F20B0CE /* url.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = url.cpp; sourceTree = "<group>"; };
+		5F00F52F7BFAB8AA5CFECF9A /* scsh_codeblock.c */ = {isa = PBXFileReference; includeInIndex = 1; path = scsh_codeblock.c; sourceTree = "<group>"; };
+		661F90A99F9E28035E55402F /* TeXRenderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeXRenderProtocol.swift; sourceTree = "<group>"; };
+		67F87B87A1098B44D43E9C73 /* decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = decode.c; sourceTree = "<group>"; };
+		738DCC0C5599C5565FEE0889 /* strikethrough.c */ = {isa = PBXFileReference; includeInIndex = 1; path = strikethrough.c; sourceTree = "<group>"; };
+		757E3A4957170420E234396B /* cmark.c */ = {isa = PBXFileReference; includeInIndex = 1; path = cmark.c; sourceTree = "<group>"; };
+		7682738145C00A3C4B532D28 /* encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = encode.c; sourceTree = "<group>"; };
+		798A80A7FBB59854342BD12D /* c_log.c */ = {isa = PBXFileReference; includeInIndex = 1; path = c_log.c; sourceTree = "<group>"; };
 		8304A20B2F61616200FFFB35 /* syntax-highlight.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = "syntax-highlight.rb"; sourceTree = "<group>"; };
 		8304B0B4238E8B21007A455C /* about_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about_highlight.png; sourceTree = "<group>"; };
 		8304B0B6238FA897007A455C /* TaskResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
@@ -784,10 +923,39 @@
 		83EDC92C25F6E23100B1621E /* FontSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectorViewController.swift; sourceTree = "<group>"; };
 		83F70DCF305ACC8900D4853F /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		83FD6EED246C71C600F5BDF3 /* Syntax Highlight XPC Render.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Syntax Highlight XPC Render.entitlements"; sourceTree = "<group>"; };
+		8B08557BB8FBA50D03205035 /* libcurl.tbd */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		8F426397360608118F6804DC /* scanners.c */ = {isa = PBXFileReference; includeInIndex = 1; path = scanners.c; sourceTree = "<group>"; };
+		951C4D0B2B9296EAAE1CBF71 /* iterator.c */ = {isa = PBXFileReference; includeInIndex = 1; path = iterator.c; sourceTree = "<group>"; };
+		9C041F15B73A4F4E725D52D0 /* markdown.css */ = {isa = PBXFileReference; includeInIndex = 1; path = markdown.css; sourceTree = "<group>"; };
+		A6614F78F08312DBCECB2A2B /* table.c */ = {isa = PBXFileReference; includeInIndex = 1; path = table.c; sourceTree = "<group>"; };
+		ADE249B6AEE957C31F2F9103 /* main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B29E67FC32302BC32D6EFB0A /* latex.c */ = {isa = PBXFileReference; includeInIndex = 1; path = latex.c; sourceTree = "<group>"; };
+		B39EA59C83C73339EEBC3B4D /* footnotes.c */ = {isa = PBXFileReference; includeInIndex = 1; path = footnotes.c; sourceTree = "<group>"; };
+		B3AA8B5CE15E85EECB802D3E /* inlines.c */ = {isa = PBXFileReference; includeInIndex = 1; path = inlines.c; sourceTree = "<group>"; };
+		B83F6469F81838169042D919 /* TeXRender.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = TeXRender.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDEA80979E995EF2BE6957A /* syntax_extension.c */ = {isa = PBXFileReference; includeInIndex = 1; path = syntax_extension.c; sourceTree = "<group>"; };
+		BE3BE21421964AF6B99E1340 /* emoji_utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = emoji_utils.cpp; sourceTree = "<group>"; };
+		C1E0F26971A5A1C156328592 /* tagfilter.c */ = {isa = PBXFileReference; includeInIndex = 1; path = tagfilter.c; sourceTree = "<group>"; };
+		C34C811A6762D64FCEEFFE8C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0A913E8AEBBEE6DF462170 /* MIMEtype.c */ = {isa = PBXFileReference; includeInIndex = 1; path = MIMEtype.c; sourceTree = "<group>"; };
+		CF40594B71BC216121717ACC /* buffer.c */ = {isa = PBXFileReference; includeInIndex = 1; path = buffer.c; sourceTree = "<group>"; };
+		D372367DD0DF971C4BF6B630 /* heads.c */ = {isa = PBXFileReference; includeInIndex = 1; path = heads.c; sourceTree = "<group>"; };
+		DC889B3B8DAAB225F022A5B2 /* man.c */ = {isa = PBXFileReference; includeInIndex = 1; path = man.c; sourceTree = "<group>"; };
+		DEE3BC276601252B34AFFC2F /* autolink.c */ = {isa = PBXFileReference; includeInIndex = 1; path = autolink.c; sourceTree = "<group>"; };
+		E2881A7F825036C9EC1C3B7D /* arena.c */ = {isa = PBXFileReference; includeInIndex = 1; path = arena.c; sourceTree = "<group>"; };
+		E5B821A089FF529BA5ED8709 /* houdini_href_e.c */ = {isa = PBXFileReference; includeInIndex = 1; path = houdini_href_e.c; sourceTree = "<group>"; };
+		E6CC4A39CA792D480B6A6978 /* inlineimage.c */ = {isa = PBXFileReference; includeInIndex = 1; path = inlineimage.c; sourceTree = "<group>"; };
+		E873A6AC89D83443BF30EF8D /* xml.c */ = {isa = PBXFileReference; includeInIndex = 1; path = xml.c; sourceTree = "<group>"; };
+		E8CD72C11CF5781AC605BDF3 /* html.c */ = {isa = PBXFileReference; includeInIndex = 1; path = html.c; sourceTree = "<group>"; };
+		EA32B71D7914A02E179CA9E6 /* registry.c */ = {isa = PBXFileReference; includeInIndex = 1; path = registry.c; sourceTree = "<group>"; };
+		ED86E94A8C06202E2C06DB96 /* node.c */ = {isa = PBXFileReference; includeInIndex = 1; path = node.c; sourceTree = "<group>"; };
+		F5E814BC1F9930F0B4A254B9 /* utf8.c */ = {isa = PBXFileReference; includeInIndex = 1; path = utf8.c; sourceTree = "<group>"; };
+		F897CF05D0E489F9526A57BE /* heads_utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = heads_utils.cpp; sourceTree = "<group>"; };
+		FAC2C7C9A1563C4BA9FBF4E7 /* alert.c */ = {isa = PBXFileReference; includeInIndex = 1; path = alert.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		83ABC9C82D1BF61900CF8972 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		83ABC9C82D1BF61900CF8972 /* Exceptions for "ShortcutCommand" folder in "Syntax Hightlight Shortcut Action" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -797,8 +965,29 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		832F7E572E054B8E0015DBBC /* settings_chk */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = settings_chk; sourceTree = "<group>"; };
-		83ABC9BB2D1BF61900CF8972 /* ShortcutCommand */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (83ABC9C82D1BF61900CF8972 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ShortcutCommand; sourceTree = "<group>"; };
+		832F7E572E054B8E0015DBBC /* settings_chk */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = settings_chk;
+			sourceTree = "<group>";
+		};
+		83ABC9BB2D1BF61900CF8972 /* ShortcutCommand */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				83ABC9C82D1BF61900CF8972 /* Exceptions for "ShortcutCommand" folder in "Syntax Hightlight Shortcut Action" target */,
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = ShortcutCommand;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -845,6 +1034,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836CD7872830250D00F074CB /* Yams in Frameworks */,
+				0A81A08EAE352F12583C6BD6 /* libcurl.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,6 +1043,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				836CD783283024D000F074CB /* Yams in Frameworks */,
+				F6ACAFF33A2BD9DBF72AFE96 /* libcurl.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +1055,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		93EBA9CD6AF5B0188E67F63C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -872,6 +1070,45 @@
 			children = (
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		24889E9B0CB1B10DD4A3CEC0 /* cmark-extra */ = {
+			isa = PBXGroup;
+			children = (
+				798A80A7FBB59854342BD12D /* c_log.c */,
+				5CC42A492A0F44474F20B0CE /* url.cpp */,
+				4A97FD499FC92CFB364C1BE3 /* b64.c */,
+				B1EB610EC9F87287EAB37E5F /* MIMEtype */,
+				FCDAB5838E4144C6487BC23E /* extensions */,
+			);
+			name = "cmark-extra";
+			path = "cmark-extra";
+			sourceTree = "<group>";
+		};
+		3913F5DC609F1928733591DF /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DEE3BC276601252B34AFFC2F /* autolink.c */,
+				5AFC55C5432EC501FE9C6611 /* core-extensions.c */,
+				03F080B52A1454B997FD4CE2 /* ext_scanners.c */,
+				738DCC0C5599C5565FEE0889 /* strikethrough.c */,
+				A6614F78F08312DBCECB2A2B /* table.c */,
+				C1E0F26971A5A1C156328592 /* tagfilter.c */,
+				27A6EEA522176EA081EFC8B4 /* tasklist.c */,
+			);
+			name = extensions;
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		4A97FD499FC92CFB364C1BE3 /* b64.c */ = {
+			isa = PBXGroup;
+			children = (
+				7682738145C00A3C4B532D28 /* encode.c */,
+				67F87B87A1098B44D43E9C73 /* decode.c */,
+				08D57FB0ACAED775E44A3347 /* buffer.c */,
+			);
+			name = b64.c;
+			path = b64.c;
 			sourceTree = "<group>";
 		};
 		8304A20C2F61616200FFFB35 /* Casks */ = {
@@ -904,6 +1141,7 @@
 				836CD788283029B600F074CB /* settings.yaml */,
 				83A0691023672FD100C795D6 /* style.css */,
 				834DA8332735BC0B00519C78 /* style2.css */,
+				9C041F15B73A4F4E725D52D0 /* markdown.css */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -1274,6 +1512,9 @@
 				8359235D23559A2B001506B6 /* Frameworks */,
 				83592346235599F6001506B6 /* Products */,
 				83B47BB725A77AEE00DE0CF4 /* highlight-wrapper.xcodeproj */,
+				FB43061E0CA6CA139660E3EF /* TeXRender */,
+				F8E75278E3B066949CD8BBEF /* cmark-gfm */,
+				24889E9B0CB1B10DD4A3CEC0 /* cmark-extra */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1289,6 +1530,7 @@
 				83A25C4B2D1DD7DB00C8B349 /* highlight */,
 				83ABC9BA2D1BF61900CF8972 /* Syntax Hightlight Shortcut Action.appex */,
 				832F7E562E054B8E0015DBBC /* settings_chk */,
+				B83F6469F81838169042D919 /* TeXRender.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1333,6 +1575,7 @@
 				8359239A23565890001506B6 /* Foundation.framework */,
 				8359237523563A81001506B6 /* WebKit.framework */,
 				8359235E23559A2B001506B6 /* Quartz.framework */,
+				8B08557BB8FBA50D03205035 /* libcurl.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1446,6 +1689,7 @@
 				836D01E32386C7CD00B85545 /* File+Ext.swift */,
 				836A09DE270441680067AF0D /* languages.json */,
 				837BB0D72703A37700B76650 /* Syntax Highlight XPC Render-Bridging-Header.h */,
+				0A5E535C48D667A5748FCA49 /* MarkdownRenderer.swift */,
 			);
 			path = SyntaxHighlightRenderXPC;
 			sourceTree = "<group>";
@@ -1484,6 +1728,87 @@
 			name = Themes;
 			sourceTree = "<group>";
 		};
+		B1EB610EC9F87287EAB37E5F /* MIMEtype */ = {
+			isa = PBXGroup;
+			children = (
+				CA0A913E8AEBBEE6DF462170 /* MIMEtype.c */,
+			);
+			name = MIMEtype;
+			path = MIMEtype;
+			sourceTree = "<group>";
+		};
+		BDDDE4E5F495106A54B037D1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E2881A7F825036C9EC1C3B7D /* arena.c */,
+				4C35886A88AFE8A97462851C /* blocks.c */,
+				CF40594B71BC216121717ACC /* buffer.c */,
+				757E3A4957170420E234396B /* cmark.c */,
+				287A286A98A1BC88ADA00CE9 /* cmark_ctype.c */,
+				256B9F7B156ADC7CC866F956 /* commonmark.c */,
+				B39EA59C83C73339EEBC3B4D /* footnotes.c */,
+				E5B821A089FF529BA5ED8709 /* houdini_href_e.c */,
+				1C5E649FD7141B96870FF97B /* houdini_html_e.c */,
+				2BE0461526FE051DE0763BD9 /* houdini_html_u.c */,
+				E8CD72C11CF5781AC605BDF3 /* html.c */,
+				B3AA8B5CE15E85EECB802D3E /* inlines.c */,
+				951C4D0B2B9296EAAE1CBF71 /* iterator.c */,
+				B29E67FC32302BC32D6EFB0A /* latex.c */,
+				193F80569876E2F0AB29790C /* linked_list.c */,
+				DC889B3B8DAAB225F022A5B2 /* man.c */,
+				4E124D33BBDB1EB12348FB6E /* map.c */,
+				ED86E94A8C06202E2C06DB96 /* node.c */,
+				53C45550845246053A7AA551 /* plaintext.c */,
+				2B641FA9CBE5EDE5333EB6A3 /* plugin.c */,
+				361434064CB44E8B2D562897 /* references.c */,
+				EA32B71D7914A02E179CA9E6 /* registry.c */,
+				1BC5A161382C018DEE86773E /* render.c */,
+				8F426397360608118F6804DC /* scanners.c */,
+				BCDEA80979E995EF2BE6957A /* syntax_extension.c */,
+				F5E814BC1F9930F0B4A254B9 /* utf8.c */,
+				E873A6AC89D83443BF30EF8D /* xml.c */,
+			);
+			name = src;
+			path = src;
+			sourceTree = "<group>";
+		};
+		F8E75278E3B066949CD8BBEF /* cmark-gfm */ = {
+			isa = PBXGroup;
+			children = (
+				BDDDE4E5F495106A54B037D1 /* src */,
+				3913F5DC609F1928733591DF /* extensions */,
+			);
+			name = "cmark-gfm";
+			path = "cmark-gfm";
+			sourceTree = "<group>";
+		};
+		FB43061E0CA6CA139660E3EF /* TeXRender */ = {
+			isa = PBXGroup;
+			children = (
+				661F90A99F9E28035E55402F /* TeXRenderProtocol.swift */,
+				ADE249B6AEE957C31F2F9103 /* main.swift */,
+				000002D41F159B5BA8506EC4 /* TeXRenderer.swift */,
+				C34C811A6762D64FCEEFFE8C /* Info.plist */,
+			);
+			name = TeXRender;
+			path = TeXRender;
+			sourceTree = "<group>";
+		};
+		FCDAB5838E4144C6487BC23E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAC2C7C9A1563C4BA9FBF4E7 /* alert.c */,
+				005C325DEC8D2CD1D7E29E90 /* emoji.c */,
+				BE3BE21421964AF6B99E1340 /* emoji_utils.cpp */,
+				D372367DD0DF971C4BF6B630 /* heads.c */,
+				F897CF05D0E489F9526A57BE /* heads_utils.cpp */,
+				E6CC4A39CA792D480B6A6978 /* inlineimage.c */,
+				5F00F52F7BFAB8AA5CFECF9A /* scsh_codeblock.c */,
+			);
+			name = extensions;
+			path = extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
@@ -1498,8 +1823,6 @@
 			dependencies = (
 			);
 			name = extra_resources;
-			packageProductDependencies = (
-			);
 			passBuildSettingsInEnvironment = 1;
 			productName = extra_resources;
 		};
@@ -1515,8 +1838,6 @@
 				832F7E602E05510C0015DBBC /* PBXTargetDependency */,
 			);
 			name = "yaml checker";
-			packageProductDependencies = (
-			);
 			passBuildSettingsInEnvironment = 1;
 			productName = "yaml checker";
 		};
@@ -1597,6 +1918,7 @@
 			);
 			dependencies = (
 				8362582B25A9F3E100475069 /* PBXTargetDependency */,
+				72BE3A12D9E20918A40B6BB0 /* PBXTargetDependency */,
 			);
 			name = "Syntax Highlight Quick Look Extension";
 			productName = QLExtension;
@@ -1692,6 +2014,23 @@
 			productReference = 83ABC9BA2D1BF61900CF8972 /* Syntax Hightlight Shortcut Action.appex */;
 			productType = "com.apple.product-type.extensionkit-extension";
 		};
+		CBB000E4D906132930826FDC /* TeXRender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6A741A25B8459587DD18C21 /* Build configuration list for PBXNativeTarget "TeXRender" */;
+			buildPhases = (
+				E1FF304BB5DD0F5A98757DFD /* Sources */,
+				93EBA9CD6AF5B0188E67F63C /* Frameworks */,
+				D17BBF77D9806D86AE30ACF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeXRender;
+			productName = TeXRender;
+			productReference = B83F6469F81838169042D919 /* TeXRender.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1774,6 +2113,7 @@
 				8373D5C22716161800B43140 /* syntax_highlight_cli */,
 				83FDB5322D10493D00D55608 /* yaml checker */,
 				83A25C6C2D1E06CC00C8B349 /* extra_resources */,
+				CBB000E4D906132930826FDC /* TeXRender */,
 			);
 		};
 /* End PBXProject section */
@@ -1818,6 +2158,13 @@
 				83A25C5A2D1DDA6500C8B349 /* dos2unix in Resources */,
 				83A25C432D1DA9DD00C8B349 /* languages.json in Resources */,
 				83A25C6B2D1E055600C8B349 /* touch_files.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17BBF77D9806D86AE30ACF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1914,6 +2261,7 @@
 				8359236223559A2B001506B6 /* PreviewViewController.swift in Sources */,
 				8359239E23570C5B001506B6 /* SCSHError.swift in Sources */,
 				839CA3A12460699C0048E249 /* String+GShell.swift in Sources */,
+				F220FD9146F028BF34999BE0 /* TeXRenderProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1962,6 +2310,54 @@
 				8373D5CD2716B04800B43140 /* UTI.swift in Sources */,
 				8373D5CC2716B04000B43140 /* NotificationCenter+ext.swift in Sources */,
 				8373D5DC2716BA6100B43140 /* SCSHBaseXPCService.swift in Sources */,
+				F26992575FFE1A5837FA5291 /* arena.c in Sources */,
+				20FC9AFFB41710A3941AE37C /* blocks.c in Sources */,
+				2D9BDF1D5E3D9C8A4EC953E8 /* buffer.c in Sources */,
+				0BD2C44BA5708D79016D0BE4 /* cmark.c in Sources */,
+				6D7BD96715AF7933A1B76EA0 /* cmark_ctype.c in Sources */,
+				33AAE8013BEEA176AA4EA249 /* commonmark.c in Sources */,
+				5814FF68B99786DC36B40AD4 /* footnotes.c in Sources */,
+				6B0D5CBE2B83426AE6B74508 /* houdini_href_e.c in Sources */,
+				693FED40F5372895F9835DC8 /* houdini_html_e.c in Sources */,
+				18E757E05F681E5A37A69487 /* houdini_html_u.c in Sources */,
+				00A4F8F60793DC1B9D262CDA /* html.c in Sources */,
+				E37B4EC53D9FEEEB1E12FCD2 /* inlines.c in Sources */,
+				B829F2AB01CA2EABA231E3C8 /* iterator.c in Sources */,
+				4B891D37A88965F0BDD03859 /* latex.c in Sources */,
+				A077D49F83D01D2A1BF9F93F /* linked_list.c in Sources */,
+				7394DB0E1813E7FD080BBF74 /* man.c in Sources */,
+				F3D3363F6AEBA80A432F890D /* map.c in Sources */,
+				775B6A48039DE053394DB6E0 /* node.c in Sources */,
+				734A9895658283A5067BB701 /* plaintext.c in Sources */,
+				56F167B7CD1CC76D9F64C032 /* plugin.c in Sources */,
+				C345E7B716D8EC25C59959AE /* references.c in Sources */,
+				B8FD3B67AF7DA949EEE460F3 /* registry.c in Sources */,
+				B58E2140F8DD79217003D686 /* render.c in Sources */,
+				C35F9EB4D6415BF52D17BB84 /* scanners.c in Sources */,
+				4E9C8AC79274EF461C139D74 /* syntax_extension.c in Sources */,
+				6C38B704C848533C8AA44F67 /* utf8.c in Sources */,
+				E616AEA5B84F56756CF2742F /* xml.c in Sources */,
+				994C60EC9FBD3F277A9FB648 /* autolink.c in Sources */,
+				07B58258B458AAE35C968034 /* core-extensions.c in Sources */,
+				190B0C2982A59EBC149EBEB7 /* ext_scanners.c in Sources */,
+				123F0207725A6834173DAE07 /* strikethrough.c in Sources */,
+				E44574B442807B0E71531A75 /* table.c in Sources */,
+				BF6C849935C7E9E61436E8AD /* tagfilter.c in Sources */,
+				F5DCF7E7103181C214FCCBFF /* tasklist.c in Sources */,
+				2C19B4932E176881503519E1 /* c_log.c in Sources */,
+				D3194B6C4C2F9010D8353D03 /* url.cpp in Sources */,
+				152FAE806C541E882ECF52E1 /* encode.c in Sources */,
+				36F13399E5BB2746EDDC8AF5 /* decode.c in Sources */,
+				D18F6027F54E845DE5BA1BFB /* buffer.c in Sources */,
+				53B8AB7324D104BA24E8950C /* MIMEtype.c in Sources */,
+				5963AF56644DE4C94B40E756 /* alert.c in Sources */,
+				E1D48F1B16E4C1C45A0E15F3 /* emoji.c in Sources */,
+				0C225D26951413115B5F3FCD /* emoji_utils.cpp in Sources */,
+				BE326893886CD5C7D4639295 /* heads.c in Sources */,
+				53397D1666951B52C3DA1A4D /* heads_utils.cpp in Sources */,
+				B51754FDA23D32D3DC092BE8 /* inlineimage.c in Sources */,
+				73A10E1FDE02306A803E6F21 /* scsh_codeblock.c in Sources */,
+				6B6A878FFBF7CBADEE4AFCFC /* MarkdownRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1987,6 +2383,54 @@
 				8304B0BD238FBCC4007A455C /* SCSHBaseXPCService.swift in Sources */,
 				834DA8382736733100519C78 /* String+ext.swift in Sources */,
 				83860D6B260F50A90076AA5E /* NotificationCenter+ext.swift in Sources */,
+				988CE375628427BB40095E04 /* arena.c in Sources */,
+				4CA46CC0BCC676C4B28D1F27 /* blocks.c in Sources */,
+				1689D135B1E082E51AC6B908 /* buffer.c in Sources */,
+				53E507C4029630085355D7AB /* cmark.c in Sources */,
+				8D31B0122FD524CE050A40D1 /* cmark_ctype.c in Sources */,
+				A2A9568FD0F56230A95EF95B /* commonmark.c in Sources */,
+				FBB9EBC26BAFA87274D5C566 /* footnotes.c in Sources */,
+				CF43B8CA62A0C7CB8BCE0A99 /* houdini_href_e.c in Sources */,
+				C496B5AECBE7C1AF2592040C /* houdini_html_e.c in Sources */,
+				578568C93CBE17251018B7C9 /* houdini_html_u.c in Sources */,
+				7B40240EE76A3B415A7AF767 /* html.c in Sources */,
+				B80CC5B66A44C2AC11A34967 /* inlines.c in Sources */,
+				5C905E0D93533C2E2AC7C0FE /* iterator.c in Sources */,
+				64FBC8169099BDD1C8C23A8F /* latex.c in Sources */,
+				098ABF5CA5FC1A335669E71E /* linked_list.c in Sources */,
+				F033E6572A71330A2315EA4F /* man.c in Sources */,
+				F4DE440D764911FE2F5896DF /* map.c in Sources */,
+				39330C88169B32151B23382A /* node.c in Sources */,
+				B550C86F1A395F9CE1C121AB /* plaintext.c in Sources */,
+				BD6F78F435F3121BFEF8C117 /* plugin.c in Sources */,
+				E84349C6F2378D576B76C2A1 /* references.c in Sources */,
+				5AC95C8EFE6376CDA829A5A2 /* registry.c in Sources */,
+				075E7396CFB048623854D6D5 /* render.c in Sources */,
+				33B0072CBEEBCFE9A57F1BC7 /* scanners.c in Sources */,
+				F6DB4B31C3DE4947A8EFE904 /* syntax_extension.c in Sources */,
+				BEBB75F48DE856DC4C226C88 /* utf8.c in Sources */,
+				84C14A7925541ACAE927CA6E /* xml.c in Sources */,
+				ED1AD6CE808C6C39768235C6 /* autolink.c in Sources */,
+				FD95F38329FE8C7F75D3C88C /* core-extensions.c in Sources */,
+				145C2AF1AE8EC0A4AE546848 /* ext_scanners.c in Sources */,
+				2DD544C727B445147A920E41 /* strikethrough.c in Sources */,
+				B28B5E8C694060A4B54D598B /* table.c in Sources */,
+				E24CBA232C1A8150A49BBDFF /* tagfilter.c in Sources */,
+				A5ED03CBE1BC4C34F7E42FCA /* tasklist.c in Sources */,
+				B3F329774B4CFF75454CD781 /* c_log.c in Sources */,
+				4B7D0B2D8B4AA29BCAD19194 /* url.cpp in Sources */,
+				F70C617A3090269B4FF340E2 /* encode.c in Sources */,
+				D5E6DB28A930DE2C35A66D5D /* decode.c in Sources */,
+				D24CCF9CCDF194C555CA2E3E /* buffer.c in Sources */,
+				CC47C70395CA75DD2A0B0C64 /* MIMEtype.c in Sources */,
+				C8BB5472DA3CD8835E98F184 /* alert.c in Sources */,
+				9BC17B2351DE336DB0E7DE50 /* emoji.c in Sources */,
+				DC20AAAA997D792D2E3478F9 /* emoji_utils.cpp in Sources */,
+				149BD0F62BA8FCA1F8116138 /* heads.c in Sources */,
+				20E47DAC782CAB297B6BCE3E /* heads_utils.cpp in Sources */,
+				422D45CBE9DF4204B422F495 /* inlineimage.c in Sources */,
+				F72BFCA0CB361E9D17ECCB41 /* scsh_codeblock.c in Sources */,
+				C9D155EA2FD13A493D9CD4F9 /* MarkdownRenderer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2011,6 +2455,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1FF304BB5DD0F5A98757DFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4BC12D7FE0BB4661AEB9D1 /* TeXRenderProtocol.swift in Sources */,
+				F29C5DDF5C037F5948F75629 /* main.swift in Sources */,
+				723FE91A079C809B23B101D6 /* TeXRenderer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2018,6 +2472,11 @@
 			isa = PBXTargetDependency;
 			name = "highlight-wrapper";
 			targetProxy = 1F39AA702741F97600569E96 /* PBXContainerItemProxy */;
+		};
+		72BE3A12D9E20918A40B6BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBB000E4D906132930826FDC /* TeXRender */;
+			targetProxy = 31C1735882651E3C2E162C62 /* PBXContainerItemProxy */;
 		};
 		830DF9F227203756004429F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2098,6 +2557,29 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		250D15D491FF4F27766C767D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 82;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = SNC2X5N2CY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TeXRender/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 2.2.0;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.TeXRender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		832F7E5B2E054B8E0015DBBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2297,7 +2779,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2319,7 +2801,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/highlight\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2338,7 +2820,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2360,7 +2842,7 @@
 					"\"$(BUILT_PRODUCTS_DIR)/highlight\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2377,13 +2859,21 @@
 				CODE_SIGN_ENTITLEMENTS = QLExtension/QLExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cmark-gfm/generated\"",
+					"\"$(SRCROOT)/cmark-gfm/src\"",
+					"\"$(SRCROOT)/cmark-gfm/extensions\"",
+					"\"$(SRCROOT)/cmark-extra\"",
+					"\"$(SRCROOT)/cmark-extra/extensions\"",
 				);
 				INFOPLIST_FILE = QLExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2392,7 +2882,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.QuickLookExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2409,13 +2899,21 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cmark-gfm/generated\"",
+					"\"$(SRCROOT)/cmark-gfm/src\"",
+					"\"$(SRCROOT)/cmark-gfm/extensions\"",
+					"\"$(SRCROOT)/cmark-extra\"",
+					"\"$(SRCROOT)/cmark-extra/extensions\"",
 				);
 				INFOPLIST_FILE = QLExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2424,7 +2922,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.QuickLookExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2442,7 +2940,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2453,7 +2951,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/highlight\"";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.XPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2473,7 +2971,7 @@
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2484,7 +2982,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/highlight\"";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.XPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2502,6 +3000,7 @@
 			buildSettings = {
 				AUTOMATION_APPLE_EVENTS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = syntax_highlight_cli/syntax_highlight_cli.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -2514,6 +3013,21 @@
 				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
 				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
 				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CMARK_GFM_STATIC_DEFINE=1",
+				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cmark-gfm/generated\"",
+					"\"$(SRCROOT)/cmark-gfm/src\"",
+					"\"$(SRCROOT)/cmark-gfm/extensions\"",
+					"\"$(SRCROOT)/cmark-extra\"",
+					"\"$(SRCROOT)/cmark-extra/extensions\"",
+					"\"$(SRCROOT)/cmark-extra/b64.c\"",
+					"\"$(SRCROOT)/cmark-extra/MIMEtype\"",
+				);
 				INSTALL_PATH = "\"$(BUILT_PRODUCTS_DIR)/Syntax Highlight.app/Contents/Resources\"";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.cli;
@@ -2526,6 +3040,8 @@
 				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
 				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = YES;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SCSH_MARKDOWN";
+				SWIFT_OBJC_BRIDGING_HEADER = "SyntaxHighlightRenderXPC/Syntax Highlight XPC Render-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -2535,6 +3051,7 @@
 			buildSettings = {
 				AUTOMATION_APPLE_EVENTS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = syntax_highlight_cli/syntax_highlight_cli.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -2547,6 +3064,21 @@
 				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
 				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
 				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CMARK_GFM_STATIC_DEFINE=1",
+				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cmark-gfm/generated\"",
+					"\"$(SRCROOT)/cmark-gfm/src\"",
+					"\"$(SRCROOT)/cmark-gfm/extensions\"",
+					"\"$(SRCROOT)/cmark-extra\"",
+					"\"$(SRCROOT)/cmark-extra/extensions\"",
+					"\"$(SRCROOT)/cmark-extra/b64.c\"",
+					"\"$(SRCROOT)/cmark-extra/MIMEtype\"",
+				);
 				INSTALL_PATH = "\"$(BUILT_PRODUCTS_DIR)/Syntax Highlight.app/Contents/Resources\"";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.cli;
@@ -2559,6 +3091,8 @@
 				RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION = NO;
 				RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION = YES;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SCSH_MARKDOWN";
+				SWIFT_OBJC_BRIDGING_HEADER = "SyntaxHighlightRenderXPC/Syntax Highlight XPC Render-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -2566,12 +3100,14 @@
 		838F4667238D813500268B4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "SyntaxHighlightRenderXPC/Syntax Highlight XPC Render.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2579,18 +3115,34 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CMARK_GFM_STATIC_DEFINE=1",
+				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cmark-gfm/generated\"",
+					"\"$(SRCROOT)/cmark-gfm/src\"",
+					"\"$(SRCROOT)/cmark-gfm/extensions\"",
+					"\"$(SRCROOT)/cmark-extra\"",
+					"\"$(SRCROOT)/cmark-extra/extensions\"",
+					"\"$(SRCROOT)/cmark-extra/b64.c\"",
+					"\"$(SRCROOT)/cmark-extra/MIMEtype\"",
+				);
 				INFOPLIST_FILE = SyntaxHighlightRenderXPC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@loader_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.XPCRender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SCSH_MARKDOWN";
 				SWIFT_OBJC_BRIDGING_HEADER = "SyntaxHighlightRenderXPC/Syntax Highlight XPC Render-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -2600,13 +3152,15 @@
 		838F4668238D813500268B4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "SyntaxHighlightRenderXPC/Syntax Highlight XPC Render.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2614,19 +3168,35 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"CMARK_GFM_STATIC_DEFINE=1",
+				);
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/cmark-gfm/generated\"",
+					"\"$(SRCROOT)/cmark-gfm/src\"",
+					"\"$(SRCROOT)/cmark-gfm/extensions\"",
+					"\"$(SRCROOT)/cmark-extra\"",
+					"\"$(SRCROOT)/cmark-extra/extensions\"",
+					"\"$(SRCROOT)/cmark-extra/b64.c\"",
+					"\"$(SRCROOT)/cmark-extra/MIMEtype\"",
+				);
 				INFOPLIST_FILE = SyntaxHighlightRenderXPC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@loader_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				OTHER_CODE_SIGN_FLAGS = "--timestamp";
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.XPCRender;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SCSH_MARKDOWN";
 				SWIFT_OBJC_BRIDGING_HEADER = "SyntaxHighlightRenderXPC/Syntax Highlight XPC Render-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
@@ -2673,7 +3243,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2688,7 +3258,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.ShortcutCommand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2707,7 +3277,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 81;
+				CURRENT_PROJECT_VERSION = 82;
 				DEVELOPMENT_TEAM = SNC2X5N2CY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -2722,7 +3292,7 @@
 				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 2.1.32;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.ShortcutCommand;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -2764,6 +3334,27 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
+		};
+		F5249CCDCB6FBCA5ABA3ECF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 82;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = SNC2X5N2CY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = TeXRender/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 2.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.michaelyu.SourceCodeSyntaxHighlight.TeXRender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -2854,6 +3445,15 @@
 			buildConfigurations = (
 				83FDB5342D10493D00D55608 /* Debug */,
 				83FDB5352D10493D00D55608 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6A741A25B8459587DD18C21 /* Build configuration list for PBXNativeTarget "TeXRender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250D15D491FF4F27766C767D /* Release */,
+				F5249CCDCB6FBCA5ABA3ECF6 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

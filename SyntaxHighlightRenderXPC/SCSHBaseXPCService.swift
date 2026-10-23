@@ -333,7 +333,14 @@ class SCSHBaseXPCService: NSObject {
     class func colorize(url: URL, settings: Settings, highlightBin: String, dataDir: String?, rsrcEsc: String, dos2unixBin: String?, highlightLanguages: [String: [String]], extraCss: URL?, overridingSettings: [String: AnyHashable]?, logFile: URL?, logOs: OSLog?) throws -> (data: Data, settings: SettingsRendering) {
         
         try? "Start processing \(url.path) …".appendLine(to: logFile)
-        
+
+#if SCSH_MARKDOWN
+        // Markdown files are rendered as formatted HTML (see MarkdownRenderer.swift).
+        if MarkdownRenderer.isMarkdown(url: url) {
+            return try MarkdownRenderer.render(url: url, settings: settings, highlightBin: highlightBin, dataDir: dataDir, rsrcEsc: rsrcEsc, overridingSettings: overridingSettings, logFile: logFile, logOs: logOs)
+        }
+#endif
+
         var uti = settings.searchUTI(for: url)
         var plain: PlainSettings?
         let attributes: MagicAttributes?

@@ -22,6 +22,7 @@
 
 import Cocoa
 import Quartz
+import PDFKit
 import WebKit
 import OSLog
 
@@ -79,6 +80,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
     var textScrollView: NSScrollView?
     var textView: NSTextView?
     var webView: WKWebView?
+    var pdfView: PDFView?
     var appearanceObserver: NSKeyValueObservation?
     
     /// Check if the appearance is Dark
@@ -175,7 +177,18 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
         )
         
         do {
-            let result = try self.renderFile(at: url, refreshingSettings: true)
+            let result: RenderResult
+            if TeXSupportedExtensions.contains(url.pathExtension.lowercased()) {
+                // TeX documents are compiled to PDF by the TeXRender service, bypassing the highlight service.
+                switch self.renderTeX(at: url) {
+                case .pdf(let data, let size):
+                    result = .pdf(data: data, size: size)
+                case .failure(let html):
+                    result = .html(code: html, settings: nil)
+                }
+            } else {
+                result = try self.renderFile(at: url, refreshingSettings: true)
+            }
             
             DispatchQueue.main.async {
                 let previewRect: CGRect
@@ -242,6 +255,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
                     }
                     
                     self.textScrollView?.isHidden = true
+                    self.pdfView?.isHidden = true
                     self.webView?.isHidden = false
 
                     self.webView?.loadHTMLString(code, baseURL: nil)
@@ -298,6 +312,7 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
                         self.textScrollView?.documentView = self.textView
                     }
                     self.webView?.isHidden = true
+                    self.pdfView?.isHidden = true
                     self.textScrollView?.isHidden = false
                     
                     if let settings = settings, settings.isWordWrapped, !settings.isWordWrappedSoft {
@@ -338,6 +353,27 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
                     self.textView?.textStorage?.setAttributedString(text)
                     
                     handler(nil)
+                case .pdf(let data, let size):
+                    self.preferredContentSize = size
+                    if self.pdfView == nil {
+                        let pdfView = PDFView(frame: previewRect)
+                        pdfView.autoresizingMask = [.height, .width]
+                        pdfView.autoScales = true
+                        pdfView.displayMode = .singlePageContinuous
+                        self.view.addSubview(pdfView)
+                        self.pdfView = pdfView
+                    }
+                    self.webView?.isHidden = true
+                    self.textScrollView?.isHidden = true
+                    self.pdfView?.isHidden = false
+                    
+                    if let document = PDFDocument(data: data) {
+                        self.pdfView?.document = document
+                        handler(nil)
+                    } else {
+                        os_log(OSLogType.error, log: self.log, "Unable to load the PDF generated from the TeX file.")
+                        handler(NSError(domain: NSCocoaErrorDomain, code: NSFileReadCorruptFileError, userInfo: [NSLocalizedDescriptionKey: "Unable to load the PDF generated from the TeX file."]))
+                    }
                 }
             }
         } catch {
@@ -349,6 +385,19 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
     @available(macOSApplicationExtension 12.0, *)
     func providePreview(for request: QLFilePreviewRequest, completionHandler handler: @escaping (QLPreviewReply?, Error?) -> Void) {
         // This code will be called on macOS 12 Monterey with QLIsDataBasedPreview set.
+        
+        if TeXSupportedExtensions.contains(request.fileURL.pathExtension.lowercased()) {
+            switch self.renderTeX(at: request.fileURL) {
+            case .pdf(let data, let size):
+                handler(QLPreviewReply(dataOfContentType: UTType.pdf, contentSize: size) { _ in data }, nil)
+            case .failure(let html):
+                handler(QLPreviewReply(dataOfContentType: UTType.html, contentSize: .zero) { (reply: QLPreviewReply) in
+                    reply.stringEncoding = .utf8
+                    return html.data(using: .utf8)!
+                }, nil)
+            }
+            return
+        }
         
         do {
             let result = try self.renderFile(at: request.fileURL, refreshingSettings: true)
@@ -418,6 +467,8 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
                     os_log(OSLogType.error, log: self.log, "Unable to process the file.")
                     r = QLPreviewReply(fileURL: request.fileURL)
                 }
+            case .pdf(let data, let size):
+                r = QLPreviewReply(dataOfContentType: UTType.pdf, contentSize: size) { _ in data }
             }
             handler(r, nil)
         } catch {
@@ -475,6 +526,81 @@ class PreviewViewController: NSViewController, QLPreviewingController, WKNavigat
     enum RenderResult {
         case html(code: String, settings: SettingsRendering?)
         case rtf(data: Data, settings: SettingsRendering?)
+        case pdf(data: Data, size: CGSize)
+    }
+    
+    enum TeXResult {
+        case pdf(data: Data, size: CGSize)
+        case failure(html: String)
+    }
+    
+    /// Compiles a TeX file through the unsandboxed TeXRender XPC service (the extension sandbox cannot run the TeX binaries).
+    func renderTeX(at url: URL) -> TeXResult {
+        os_log("Generating TeX preview for file %{public}s", log: self.log, type: .info, url.path)
+        
+        var pdf: Data?
+        var message = "The TeX render service is not available."
+        var texLog = ""
+        
+        let connection = NSXPCConnection(serviceName: TeXRenderServiceName)
+        connection.remoteObjectInterface = NSXPCInterface(with: TeXRenderProtocol.self)
+        connection.resume()
+        defer { connection.invalidate() }
+        
+        let service = connection.synchronousRemoteObjectProxyWithErrorHandler { error in
+            message = error.localizedDescription
+        } as? TeXRenderProtocol
+        service?.compile(path: url.path) { data, error, errorLog in
+            pdf = data
+            message = error ?? message
+            texLog = errorLog ?? ""
+        }
+        
+        if let pdf = pdf {
+            os_log("TeX preview generated (%{public}d bytes).", log: self.log, type: .info, pdf.count)
+            return .pdf(data: pdf, size: Self.texPreviewSize(for: pdf))
+        }
+        os_log(OSLogType.error, log: self.log, "TeX preview failed: %{public}s", message)
+        return .failure(html: Self.texErrorPage(for: url, message: message, log: texLog))
+    }
+    
+    /// Window size fitting the width of the first page, limited to the screen.
+    static func texPreviewSize(for pdf: Data) -> CGSize {
+        let page = PDFDocument(data: pdf)?.page(at: 0)?.bounds(for: .mediaBox).size ?? CGSize(width: 612, height: 792)
+        let available = NSScreen.main?.visibleFrame.size ?? CGSize(width: 1440, height: 900)
+        return CGSize(width: min(page.width + 40, available.width * 0.9), height: min(page.height + 40, available.height * 0.9))
+    }
+    
+    static func texErrorPage(for url: URL, message: String, log: String) -> String {
+        var details = ""
+        if !log.isEmpty {
+            // Keep the error lines reported by -file-line-error and their context.
+            let lines = log.components(separatedBy: "\n")
+            if let first = lines.firstIndex(where: { $0.hasPrefix("!") || $0.range(of: #"^[^:]+:\d+: "#, options: .regularExpression) != nil }) {
+                details = lines[first ..< min(lines.count, first + 20)].joined(separator: "\n")
+            } else {
+                details = lines.suffix(30).joined(separator: "\n")
+            }
+        }
+        let source = (try? String(contentsOf: url, encoding: .utf8)) ?? ""
+        func escape(_ s: String) -> String {
+            return s.replacingOccurrences(of: "&", with: "&amp;").replacingOccurrences(of: "<", with: "&lt;").replacingOccurrences(of: ">", with: "&gt;")
+        }
+        
+        return """
+        <!doctype html>
+        <html><head><meta charset="utf-8"><style>
+        :root { color-scheme: light dark; }
+        body { font: 13px -apple-system, sans-serif; margin: 20px; }
+        pre { font: 12px ui-monospace, monospace; white-space: pre-wrap; padding: 12px; border-radius: 6px; background: rgba(127,127,127,.12); }
+        .error { color: #d33; }
+        </style></head><body>
+        <h3 class="error">\(escape(message))</h3>
+        \(details.isEmpty ? "" : "<pre>\(escape(details))</pre>")
+        <h4>\(escape(url.lastPathComponent))</h4>
+        <pre>\(escape(source))</pre>
+        </body></html>
+        """
     }
     
     func renderFile(at url: URL, refreshingSettings: Bool) throws -> RenderResult {

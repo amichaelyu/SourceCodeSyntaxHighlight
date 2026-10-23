@@ -2,6 +2,22 @@ Changelog
 =======
 
 
+### 2.2.0 (82)
+**This release require macOS 12.0 or later.**
+
+Personal fork (amichaelyu). Apple Silicon only.
+
+New Features:
+- Markdown files (`.md`, `.markdown`, `.rmd`, `.qmd`, …) are rendered as formatted GitHub-style HTML (tables, task lists, alerts, footnotes, heading anchors, emoji, embedded local images) with fenced code blocks highlighted using the current light/dark theme. Merged from QLMarkdown; fixed defaults, no settings UI yet.
+- LaTeX files (`.tex`, `.latex`, `.ltx`) are previewed as the typeset PDF, compiled with the installed TeX distribution (pdflatex / xelatex / lualatex, honouring `% !TEX program =`) through an unsandboxed `TeXRender` XPC service. A sibling PDF newer than the source is shown directly; compile errors show the log.
+- `release.sh` builds, signs with Developer ID, notarizes and staples the app.
+
+Changes:
+- Previews are view-based again (`QLIsDataBasedPreview` off) so RTF output honours the dark theme background.
+- The "about" footer is no longer appended to previews.
+- Sparkle update checks are disabled; bundle identifiers moved to `com.michaelyu.*`.
+
+
 ### 2.1.32 (81)
 **This release require macOS 12.0 or later.**
 

@@ -6,8 +6,6 @@
 	<array>
 		<string>SNC2X5N2CY.com.michaelyu.syntaxhighlight</string>
 	</array>
-	<key>com.apple.security.get-task-allow</key>
-	<true/>
 	<key>com.apple.security.temporary-exception.files.home-relative-path.read-write</key>
 	<array>
 		<string>/Desktop</string>
