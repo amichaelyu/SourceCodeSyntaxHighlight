@@ -1,4 +1,4 @@
-[![counter](https://img.shields.io/github/downloads/sbarex/SourceCodeSyntaxHighlight/latest/total)](https://github.com/sbarex/SourceCodeSyntaxHighlight/releases) [![counter](https://img.shields.io/github/downloads/sbarex/SourceCodeSyntaxHighlight/total)](https://github.com/sbarex/SourceCodeSyntaxHighlight/releases)
+[![counter](https://img.shields.io/github/downloads/amichaelyu/SourceCodeSyntaxHighlight/latest/total)](https://github.com/amichaelyu/SourceCodeSyntaxHighlight/releases) [![counter](https://img.shields.io/github/downloads/amichaelyu/SourceCodeSyntaxHighlight/total)](https://github.com/amichaelyu/SourceCodeSyntaxHighlight/releases)
 
 [![buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy+me+a+coffee&emoji=&slug=sbarex&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff")](https://www.buymeacoffee.com/sbarex)
 
@@ -8,6 +8,14 @@
 </p>
 
 #  Syntax Highlight
+
+> **This is a fork** of [sbarex/SourceCodeSyntaxHighlight](https://github.com/sbarex/SourceCodeSyntaxHighlight) that adds rendered previews for **Markdown** (formatted GitHub-style HTML, merged from [QLMarkdown](https://github.com/sbarex/QLMarkdown)) and **LaTeX** (the typeset PDF, compiled with your TeX installation). Builds are Apple Silicon only, signed and notarized. Install with:
+>
+> ```bash
+> brew install amichaelyu/tap/syntax-highlight-plus
+> ```
+>
+> Please report problems with this fork [here](https://github.com/amichaelyu/SourceCodeSyntaxHighlight/issues), not to the upstream project.
 
 The application offers a Quick Look Extension for macOS 12.0 and later for previewing source files.
 Inside it uses [Highlight](http://www.andre-simon.de/doku/highlight/en/highlight.php) to render source code with syntax highlighting. (For macOS 11 and 10.15, the latest compatible version is 2.1.30).
@@ -43,22 +51,24 @@ If you like this application and find it useful, [buy me a coffee](https://www.b
   
 ## Installation
 
-You can install the application in various ways. When the main application is launched it automatically checks for updates. 
+You can install the application in various ways. This fork does not check for updates by itself; use Homebrew (`brew upgrade`) or the releases page.
 
 After installation, _the application must be launched at least once to allow the system to detect the Quick Look extension_. [See below](#enable-the-quick-look-extension) for instructions on how to enable the Quick Look extension. 
 
-### Download precompiled release
-Head over to the [releases](https://github.com/sbarex/SourceCodeSyntaxHighlight/releases) page to view the latest version. Move `Syntax Highlight.app` into the `Applications` folder.
-
 ### Install with Homebrew
-Syntax Highlight can also be installed via [Homebrew](https://brew.sh). If you have not installed Homebrew, follow the simple instructions [here](https://brew.sh/). After that, install the current version of Syntax Highlight with the following command:
+The fork is published as the `syntax-highlight-plus` cask in the [amichaelyu/tap](https://github.com/amichaelyu/homebrew-tap) tap. If you have not installed [Homebrew](https://brew.sh), follow the instructions [here](https://brew.sh/). Then:
 
 ```bash
-brew install syntax-highlight
+brew install amichaelyu/tap/syntax-highlight-plus
 ```
 
+The cask conflicts with the upstream `syntax-highlight` cask; uninstall that one first if you have it. LaTeX previews additionally need a TeX distribution such as [MacTeX or BasicTeX](https://www.tug.org/mactex/).
+
+### Download precompiled release
+Head over to the [releases](https://github.com/amichaelyu/SourceCodeSyntaxHighlight/releases) page to view the latest version. Move `Syntax Highlight.app` into the `Applications` folder.
+
 ### Note for the precompiled release
-The [precompiled app](https://github.com/sbarex/SourceCodeSyntaxHighlight/releases) is codesigned and notarized.
+The [precompiled app](https://github.com/amichaelyu/SourceCodeSyntaxHighlight/releases) is codesigned with Developer ID and notarized. It is built for Apple Silicon only.
 
 
 ### Build from source
