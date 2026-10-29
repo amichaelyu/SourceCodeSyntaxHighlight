@@ -319,6 +319,9 @@ class UTICellView: NSTableCellView {
             UTILabel?.toolTip = uti.UTI
         }
         UTILabel?.textColor = textField?.textColor ?? .labelColor
+        if utiFormat?.isHighlightDisabled ?? false {
+            UTILabel?.stringValue += " — plain text"
+        }
         
         if utiFormat?.isCustomized ?? false {
             textField?.font = UTICellView.customizedFont

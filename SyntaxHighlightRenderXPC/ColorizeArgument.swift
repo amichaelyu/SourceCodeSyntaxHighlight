@@ -153,7 +153,7 @@ struct ColorizeArguments {
         if let _ = env["preprocessorHL"] {
             env.removeValue(forKey: "convertEOL")
         }
-        if custom_settings.isUsingLSP {
+        if custom_settings.isUsingLSP && !custom_settings.isHighlightDisabled {
             env["useLSP"] = "1"
             env.removeValue(forKey: "maxFileSizeHL") // unsupported options for LSP
             env.removeValue(forKey: "preprocessorHL") // unsupported options for LSP
@@ -174,7 +174,11 @@ struct ColorizeArguments {
             }
         }
         
-        if custom_settings.isSyntaxDefined && !custom_settings.syntax.isEmpty {
+        if custom_settings.isHighlightDisabled {
+            // Syntax highlighting turned off for this file type: render as plain text.
+            env["syntaxHL"] = "txt"
+            try? "Highlight syntax: txt (syntax highlighting disabled)".appendLine(to: custom_settings.logFile)
+        } else if custom_settings.isSyntaxDefined && !custom_settings.syntax.isEmpty {
             env["syntaxHL"] = custom_settings.syntax
             try? "Highlight syntax: \(custom_settings.syntax)".appendLine(to: custom_settings.logFile)
         }

@@ -2,6 +2,16 @@ Changelog
 =======
 
 
+### 2.2.1 (83)
+**This release require macOS 12.0 or later.**
+
+New Features:
+- Per file type "Syntax highlighting" switch in the settings: when off, files of that type are shown as plain text (theme colors, font, line numbers and wrapping still apply; the custom syntax and language server are skipped).
+
+Changes:
+- The Quick Look extension no longer claims `net.daringfireball.markdown`, `public.markdown` and `net.ia.markdown`, so `.md` files are previewed by another Quick Look extension (e.g. Obsidian's). Other Markdown variants (`.rmd`, `.qmd`, Typora, …) are still rendered.
+
+
 ### 2.2.0 (82)
 **This release require macOS 12.0 or later.**
 

@@ -335,8 +335,9 @@ class SCSHBaseXPCService: NSObject {
         try? "Start processing \(url.path) …".appendLine(to: logFile)
 
 #if SCSH_MARKDOWN
-        // Markdown files are rendered as formatted HTML (see MarkdownRenderer.swift).
-        if MarkdownRenderer.isMarkdown(url: url) {
+        // Markdown files are rendered as formatted HTML (see MarkdownRenderer.swift),
+        // unless syntax highlighting is disabled for their type: then they are shown as plain text.
+        if MarkdownRenderer.isMarkdown(url: url), !(settings.searchUTI(for: url).flatMap { settings.utiSettings[$0]?.isHighlightDisabled } ?? false) {
             return try MarkdownRenderer.render(url: url, settings: settings, highlightBin: highlightBin, dataDir: dataDir, rsrcEsc: rsrcEsc, overridingSettings: overridingSettings, logFile: logFile, logOs: logOs)
         }
 #endif

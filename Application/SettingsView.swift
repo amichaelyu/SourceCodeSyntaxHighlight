@@ -74,6 +74,10 @@ class SettingsView: NSView, SettingsSplitViewElement {
     
     @IBOutlet weak var advancedWarning: NSTextField!
     
+    /// Turn off the syntax highlighting for a file type (row added in code, visible only for the file type settings).
+    let highlightLabel = NSTextField(labelWithString: "Syntax highlighting:")
+    let highlightSwitch = NSSwitch()
+    
     var settings: SettingsBase? {
         didSet {
             initSettings()
@@ -137,6 +141,12 @@ class SettingsView: NSView, SettingsSplitViewElement {
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.width, .height]
+        
+        highlightLabel.alignment = .right
+        highlightSwitch.toolTip = "When off, files of this type are shown as plain text without syntax highlighting."
+        highlightSwitch.target = self
+        highlightSwitch.action = #selector(onHighlightChanged(_:))
+        gridView.insertRow(at: 0, with: [highlightLabel, highlightSwitch]).bottomPadding = 12
         
         for btn in [themeLightButton, themeDarkButton] {
             // Add round corners and border to the theme icons.
@@ -312,6 +322,8 @@ class SettingsView: NSView, SettingsSplitViewElement {
             
             lspButton.isEnabled = false
             
+            highlightSwitch.isEnabled = false
+            
             gridView.cell(for: advancedWarning)?.row?.isHidden = true
             
             return false
@@ -385,7 +397,13 @@ class SettingsView: NSView, SettingsSplitViewElement {
             gridView.cell(for: lspButton)?.row?.isHidden = !self.isAdvancedSettingsVisible
             lspButton.isEnabled = true
             lspButton.image = s.LSPImage
+            
+            gridView.cell(for: highlightSwitch)?.row?.isHidden = false
+            highlightSwitch.isEnabled = true
+            highlightSwitch.state = s.isHighlightDisabled ? .off : .on
+            updateHighlightControls()
         } else {
+            gridView.cell(for: highlightSwitch)?.row?.isHidden = true
             gridView.cell(for: arguments2TextField)?.row?.isHidden = true
             gridView.cell(for: preprocessorTextField)?.row?.isHidden = true
             gridView.cell(for: syntaxPopupButton)?.row?.isHidden = true
@@ -640,6 +658,21 @@ class SettingsView: NSView, SettingsSplitViewElement {
                 settings.syntax = ""
             }
         }
+    }
+    
+    @IBAction func onHighlightChanged(_ sender: NSSwitch) {
+        guard let settings = self.settings as? SettingsFormat else { return }
+        settings.isHighlightDisabled = sender.state == .off
+        updateHighlightControls()
+    }
+    
+    /// The syntax and the language server are not used when the syntax highlighting is disabled.
+    internal func updateHighlightControls() {
+        guard let settings = self.settings as? SettingsFormat else { return }
+        let enabled = !settings.isHighlightDisabled
+        syntaxCheckBox.isEnabled = enabled
+        syntaxPopupButton.isEnabled = enabled && settings.isSyntaxDefined
+        lspButton.isEnabled = enabled
     }
     
     @IBAction func handleCSSButton(_ sender: Any) {

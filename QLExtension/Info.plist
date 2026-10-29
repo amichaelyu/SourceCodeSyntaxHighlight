@@ -459,11 +459,8 @@
 				<string>com.barebones.bbedit.tex-source</string>
 				<string>edu.uo.texshop.tex</string>
 				<string>org.vim.tex-file</string>
-				<string>net.daringfireball.markdown</string>
-				<string>public.markdown</string>
 				<string>com.unknown.md</string>
 				<string>io.typora.markdown</string>
-				<string>net.ia.markdown</string>
 				<string>com.rstudio.rmarkdown</string>
 				<string>org.quarto.qmarkdown</string>
 				<string>dyn.ah62d4rv4ge81e5pe</string>

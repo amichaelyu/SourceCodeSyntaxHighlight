@@ -89,6 +89,7 @@ class SettingsBase: NSObject {
         static let preprocessor = "preprocessor"
         static let syntax = "syntax"
         static let appendedExtraArguments = "uti-extra"
+        static let highlightDisabled = "highlight-disabled"
         
         static let lsp = "LSP"
         static let lspExecutable = "LSP-executable"
@@ -797,6 +798,9 @@ protocol SettingsFormatProtocol: SettingsBase {
     
     dynamic var isSyntaxDefined: Bool { get set }
     dynamic var syntax: String { get set }
+    
+    /// Show the file as plain text, without syntax highlighting.
+    dynamic var isHighlightDisabled: Bool { get set }
 }
 
 // MARK: -
@@ -835,6 +839,12 @@ class SettingsFormat: SettingsBase, SettingsFormatProtocol, SettingsLSP {
     dynamic var syntax: String {
         didSet {
             self.requestRefreshOnChanged(oldValue: oldValue, newValue: syntax)
+        }
+    }
+    
+    dynamic var isHighlightDisabled: Bool {
+        didSet {
+            self.requestRefreshOnChanged(oldValue: oldValue, newValue: isHighlightDisabled)
         }
     }
     
@@ -885,7 +895,7 @@ class SettingsFormat: SettingsBase, SettingsFormatProtocol, SettingsLSP {
     
     override var isCustomized: Bool {
         get {
-            return super.isCustomized || isPreprocessorDefined || isAppendArgumentsDefined || isSyntaxDefined || isLSPCustomized
+            return super.isCustomized || isPreprocessorDefined || isAppendArgumentsDefined || isSyntaxDefined || isHighlightDisabled || isLSPCustomized
         }
     }
       
@@ -902,6 +912,7 @@ class SettingsFormat: SettingsBase, SettingsFormatProtocol, SettingsLSP {
         self.isAppendArgumentsDefined = false
         self.syntax = ""
         self.isSyntaxDefined = false
+        self.isHighlightDisabled = false
         self.preprocessor = ""
         self.isPreprocessorDefined = false
         self.specialPreprocessor = nil
@@ -940,6 +951,10 @@ class SettingsFormat: SettingsBase, SettingsFormatProtocol, SettingsLSP {
             self.isSyntaxDefined = true
         }
         
+        if let v = settings[SettingsBase.Key.highlightDisabled] as? Bool {
+            self.isHighlightDisabled = v
+        }
+        
         if let preprocessor = settings[SettingsBase.Key.preprocessor] as? String {
             self.preprocessor = preprocessor
             self.isPreprocessorDefined = true
@@ -968,6 +983,9 @@ class SettingsFormat: SettingsBase, SettingsFormatProtocol, SettingsLSP {
         }
         if isSyntaxDefined {
             r[SettingsBase.Key.syntax] = syntax
+        }
+        if isHighlightDisabled {
+            r[SettingsBase.Key.highlightDisabled] = true
         }
         if isPreprocessorDefined {
             r[SettingsBase.Key.preprocessor] = preprocessor
@@ -1699,6 +1717,12 @@ class SettingsRendering: Settings, SettingsFormatProtocol, SettingsLSP {
         }
     }
     
+    dynamic var isHighlightDisabled: Bool {
+        didSet {
+            self.requestRefreshOnChanged(oldValue: oldValue, newValue: isHighlightDisabled)
+        }
+    }
+    
     var useLSP: Bool {
         didSet {
             self.requestRefreshOnChanged(oldValue: oldValue, newValue: useLSP)
@@ -1742,7 +1766,7 @@ class SettingsRendering: Settings, SettingsFormatProtocol, SettingsLSP {
     
     override var isCustomized: Bool {
         get {
-            return super.isCustomized || isAppendArgumentsDefined || isPreprocessorDefined || isSyntaxDefined || isLSPCustomized
+            return super.isCustomized || isAppendArgumentsDefined || isPreprocessorDefined || isSyntaxDefined || isHighlightDisabled || isLSPCustomized
         }
     }
     
@@ -1778,6 +1802,7 @@ class SettingsRendering: Settings, SettingsFormatProtocol, SettingsLSP {
         self.isAppendArgumentsDefined = false
         self.syntax = ""
         self.isSyntaxDefined = false
+        self.isHighlightDisabled = false
         self.preprocessor = ""
         self.isPreprocessorDefined = false
         
@@ -1860,6 +1885,10 @@ class SettingsRendering: Settings, SettingsFormatProtocol, SettingsLSP {
             self.isSyntaxDefined = true
         }
         
+        if let v = settings[SettingsBase.Key.highlightDisabled] as? Bool {
+            self.isHighlightDisabled = v
+        }
+        
         if let preprocessor = settings[SettingsBase.Key.preprocessor] as? String {
             self.preprocessor = preprocessor
             self.isPreprocessorDefined = true
@@ -1895,6 +1924,9 @@ class SettingsRendering: Settings, SettingsFormatProtocol, SettingsLSP {
         if isSyntaxDefined {
             r[SettingsBase.Key.syntax] = syntax
         }
+        if isHighlightDisabled {
+            r[SettingsBase.Key.highlightDisabled] = true
+        }
         if isPreprocessorDefined {
             r[SettingsBase.Key.preprocessor] = preprocessor
         }
@@ -1913,7 +1945,7 @@ class SettingsRendering: Settings, SettingsFormatProtocol, SettingsLSP {
     
     override func getHighlightArguments() throws -> (theme: String, backgroundColor: String, arguments: [String]) {
         var r = try super.getHighlightArguments()
-        if isUsingLSP {
+        if isUsingLSP && !isHighlightDisabled {
             r.arguments.append("--ls-exec=\(self.lspExecutable)")
             if self.lspDelay > 0 {
                 r.arguments.append("--ls-delay=\(self.lspDelay)")
